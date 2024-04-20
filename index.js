@@ -1,3 +1,11 @@
+
+/**
+ * https://www-creators.com/archives/4463#JavascriptjQueryURL
+ * Get the URL parameter value
+ *
+ * @param  name {string} パラメータのキー文字列
+ * @return  url {url} 対象のURL文字列（任意）
+ */
 function getParam(name, url) {
 	if (!url) url = window.location.href;
 	name = name.replace(/[\[\]]/g, "\\$&");
@@ -20,6 +28,7 @@ async function check() {
 
 	let url = document.getElementById("url").value;
 
+	// なんと汚い正規表現なのでしょう
 	const rinu_regex = /^https?:\/\/rinu\.(cf|jp)\/[\w/:%#\$&\?\(\)~\.=\+\-]+$/;
 	const toku_regex = /^https?:\/\/(tokutei\.cf|tokutei\.end2end\.tech)\/\?url=[\w/:%#\$&\?\(\)~\.=\+\-]+$/;
 
@@ -52,12 +61,12 @@ async function check() {
 	}
 
 	if (toku_regex.test(dat["LinkURL"])) {
-		load.textContent = "特定ツール有り";
+		load.textContent = "特定ツール有";
 		load.classList.add("red_text");
 		go_url = getParam("url", dat["LinkURL"]);
 	}
 	else {
-		load.textContent = "特定ツール無し";
+		load.textContent = "特定ツールなし";
 		go_url = dat["LinkURL"];
 	}
 
