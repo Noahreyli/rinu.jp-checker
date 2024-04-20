@@ -1,0 +1,58 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	background-color: #f1f1f1;
+}
+
+.red_text {
+	color: red;
+}
+
+.center_box {
+	text-align: center;
+}
+
+.center_box p {
+	display: inline-block;
+	text-align: left;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+a {
+	color: rgb(19, 157, 255);
+}
+
+button {
+	background: transparent;
+	background-color: white;
+	box-shadow: none;
+	border-color: #ddd;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+}
+
+input {
+	padding: 4px 10px;
+	border-radius: 3px;
+	border: 2px solid #ddd;
+	box-sizing: border-box;
+}
+
+input:focus {
+	border: 2px solid rgb(19, 157, 255);
+	z-index: 10;
+	outline: 0;
+	box-shadow: 0 0 5px 0 rgba(19, 157, 255, 1);
+	border: 2px solid #f1f1f1 !important;
+	outline: 0;
+}
+
+.ip_warn {
+	color: #dadada;
+}
